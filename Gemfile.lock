@@ -10,6 +10,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    addressable (2.3.2)
     daemons (1.1.9)
     eventmachine (1.0.0)
     foreman (0.60.2)
@@ -34,6 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  addressable
   foreman
   haml
   rack

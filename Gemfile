@@ -8,6 +8,7 @@ gem 'haml'
 gem 'rdiscount'
 gem 'rack-flash3'
 gem 'rack-ssl-enforcer'
+gem 'addressable'
 
 group :development do
 	gem 'foreman'

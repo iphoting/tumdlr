@@ -6,6 +6,8 @@ require 'sinatra'
 require 'haml'
 require 'shellwords'
 require 'rack-flash'
+require 'uri'
+require 'addressable/uri'
 
 enable :sessions
 use Rack::Flash
@@ -25,7 +27,11 @@ post '/url' do
 	if params[:url].empty?
 		flash[:error] = "No URL entered!"
 		redirect to('/')
+	elsif !valid_url?(params[:url])
+		flash[:error] = "Invalid URL entered!"
+		redirect to('/')
 	end
+
 	cmd = "./tumblr_video_downloader.sh #{Shellwords.escape(params[:url])}"
 	@url = `#{cmd}`
 	#p @url
@@ -35,4 +41,11 @@ post '/url' do
 		redirect to('/')
 	end
 	haml :url
+end
+
+def valid_url?(url)
+  parsed = Addressable::URI.parse(url) or return false
+  %w(http https).include?(parsed.scheme)
+rescue Addressable::URI::InvalidURIError
+  false
 end
