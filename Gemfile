@@ -7,6 +7,7 @@ gem 'sinatra', :github => "sinatra"
 gem 'haml'
 gem 'rdiscount'
 gem 'rack-flash3'
+gem 'rack-ssl-enforcer'
 
 group :development do
 	gem 'foreman'

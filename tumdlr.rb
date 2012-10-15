@@ -9,7 +9,11 @@ require 'rack-flash'
 
 enable :sessions
 use Rack::Flash
-#http://yesgeorges.tumblr.com/post/33634090406/the-boys-on-xtra-factor-14-10-12-x
+
+configure :production do
+	require 'rack/ssl-enforcer'
+	use Rack::SslEnforcer, :hsts => true
+end
 
 get '/' do
 	@error = flash[:error] unless flash[:error].nil?
