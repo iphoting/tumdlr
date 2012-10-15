@@ -1,0 +1,16 @@
+!!! 5
+%html
+  %head
+    %title Tumdlr
+  %body
+    %header#header
+      %h1 Tumdlr
+      %p Finds the direct URL to the video file.
+      %hr
+    #error
+      %p= @error
+    #notice
+      %p= @notice
+
+    #content
+      =yield
