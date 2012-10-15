@@ -8,6 +8,7 @@ require 'shellwords'
 require 'rack-flash'
 require 'uri'
 require 'addressable/uri'
+require 'net/http'
 
 enable :sessions
 use Rack::Flash
@@ -36,15 +37,18 @@ post '/url' do
 		redirect to('/')
 	end
 
-	cmd = "./tumblr_video_downloader.sh #{Shellwords.escape(params[:url])}"
-	@url = `#{cmd}`
-	#p @url
+	begin
+		@url = Net::HTTP.get(URI(params[:url])).lines.grep(/video_file/i)[0].lines(' ').grep(/video_file/i)[0].gsub('\x22', '').gsub('src=', '')
 
-	if @url.empty?
+		if @url.empty?
+			flash[:error] = "No video file found!"
+			redirect to('/')
+		end
+		haml :url
+	rescue NoMethodError
 		flash[:error] = "No video file found!"
 		redirect to('/')
 	end
-	haml :url
 end
 
 def valid_url?(url)
