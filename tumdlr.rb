@@ -23,6 +23,10 @@ get '/' do
 	haml :form
 end
 
+get '/url' do
+	redirect to('/')
+end
+
 post '/url' do
 	if params[:url].empty?
 		flash[:error] = "No URL entered!"
