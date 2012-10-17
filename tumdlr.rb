@@ -10,6 +10,10 @@ require 'uri'
 require 'addressable/uri'
 require 'net/http'
 
+use Rack::ContentLength
+use Rack::Deflater
+use Rack::ConditionalGet
+
 enable :sessions
 use Rack::Flash
 
