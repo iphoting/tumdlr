@@ -41,6 +41,7 @@ post '/url' do
 	end
 
 	begin
+		@source = params[:url]
 		@url = Net::HTTP.get(URI(params[:url])).lines.grep(/video_file/i)[0].lines(' ').grep(/video_file/i)[0].gsub('\x22', '').gsub('src=', '')
 
 		if @url.empty?
