@@ -4,7 +4,6 @@ Bundler.setup(:default, ENV['RACK_ENV'])
 
 require 'sinatra'
 require 'haml'
-require 'shellwords'
 require 'rack-flash'
 require 'uri'
 require 'addressable/uri'
