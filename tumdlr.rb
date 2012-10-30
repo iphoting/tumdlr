@@ -8,6 +8,8 @@ require 'rack-flash'
 require 'uri'
 require 'addressable/uri'
 require 'net/http'
+require "#{File.dirname(__FILE__)}/tumblr-downloader"
+
 
 use Rack::ContentLength
 use Rack::Deflater
@@ -42,7 +44,7 @@ post '/url' do
 
 	begin
 		@source = params[:url]
-		@url = Net::HTTP.get(URI(params[:url])).lines.grep(/video_file/i)[0].lines(' ').grep(/video_file/i)[0].gsub('\x22', '').gsub('src=', '')
+		@url = get_tumblr_vid_url(params[:url])
 
 		if @url.empty?
 			flash[:error] = "No video file found!"
