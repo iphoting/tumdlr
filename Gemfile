@@ -9,6 +9,7 @@ gem 'rdiscount'
 gem 'rack-flash3'
 gem 'rack-ssl-enforcer'
 gem 'addressable'
+gem 'youtube-downloader'
 
 group :development do
 	gem 'foreman'
