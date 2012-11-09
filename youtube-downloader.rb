@@ -1,5 +1,5 @@
-require 'youtube-downloader/youtube'
+require 'viddl-rb'
 
 def get_youtube_vid_url (source = "")
-	Youtube::Video.new(source).url
+	ViddlRb.get_urls(source).first
 end
