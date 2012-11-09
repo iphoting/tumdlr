@@ -9,6 +9,7 @@ require 'uri'
 require 'addressable/uri'
 require 'net/http'
 require "#{File.dirname(__FILE__)}/tumblr-downloader"
+require "#{File.dirname(__FILE__)}/youtube-downloader"
 
 
 use Rack::ContentLength
@@ -42,9 +43,10 @@ post '/url' do
 		redirect to('/')
 	end
 
+	@source = params[:url]
+
 	begin
-		@source = params[:url]
-		@url = get_tumblr_vid_url(params[:url])
+		@url = get_youtube_vid_url(@source) || get_tumblr_vid_url(@source)
 
 		if @url.empty?
 			flash[:error] = "No video file found!"
