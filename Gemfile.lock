@@ -38,7 +38,7 @@ GEM
       rack
     rack-protection (1.2.0)
       rack
-    rack-ssl-enforcer (0.2.4)
+    rack-ssl-enforcer (0.2.5)
     rdiscount (1.6.8)
     rest-client (1.6.7)
       mime-types (>= 1.16)
