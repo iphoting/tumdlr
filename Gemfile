@@ -1,5 +1,5 @@
 source :rubygems
-ruby '1.9.3' if Bundler::VERSION >= "1.2.0"
+ruby '1.9.3' if Gem::Version.new(Bundler::VERSION) > Gem::Version.new('1.2.0')
 
 gem 'thin'
 gem 'rack'
