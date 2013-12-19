@@ -4,6 +4,7 @@ Bundler.setup(:default, ENV['RACK_ENV'])
 
 require 'sinatra'
 require 'haml'
+require 'rack-timeout'
 require 'rack-flash'
 require 'uri'
 require 'addressable/uri'
@@ -11,10 +12,12 @@ require 'net/http'
 require "#{File.dirname(__FILE__)}/tumblr-downloader"
 require "#{File.dirname(__FILE__)}/youtube-downloader"
 
-
+use Rack::Timeout
+Rack::Timeout.timeout = 10
+use Rack::ConditionalGet
+use Rack::ETag
 use Rack::ContentLength
 use Rack::Deflater
-use Rack::ConditionalGet
 
 enable :sessions
 use Rack::Flash
