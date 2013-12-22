@@ -1,7 +1,5 @@
-%form{:action => '/url', :method => 'post' }
-  %p
-    %label{:for => 'url'} Tumblr video post URL/address:
-    %br
-    %textarea{:autofocus => "autofocus", :name => 'url', :rows => '4', :style => 'width:99%', :placeholder => "http://jaylikesdabutt.tumblr.com/post/70041558674"}
-    %br
-    %input{:type => 'submit', :value => 'Get link!'}
+%form{ :action => '/url', :method => 'post', :role => 'form' }
+  .form-group
+    %label.control-label{ :for => 'url' } Tumblr video post URL/address
+    %input.form-control.input-lg{ :type => 'url', :autofocus => "autofocus", :name => 'url', :placeholder => "http://jaylikesdabutt.tumblr.com/post/70041558674" }
+  %input.btn.btn-primary{ :type => 'submit', :value => 'Get link!' }

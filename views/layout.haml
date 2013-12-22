@@ -1,18 +1,24 @@
 !!! 5
 %html
   %head
-    %title Tumdlr
-    %meta{:name => 'viewport', :content => "width=device-width, initial-scale=1"}
+    %title Tumdlr - Finds the downloadable link to the video file on a Tumblr
+    %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0' }
+    %link{ :rel => 'stylesheet', :href => '//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css' }
+    %link{ :rel => 'stylesheet', :href => '//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css' }
+    %script{ :src => '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js' }
+    %script{ :src => '//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js' }
   %body
-    %header#header
+    %header#header.container
       %h1
-        %a{:href => '/'} Tumdlr
+        %a{ :href => url('/') } Tumdlr
       %p Finds the downloadable link to the video file on a Tumblr, Blip, DailyMotion, Metacafe, SoundCloud, Veoh, and Vimeo.<br>(YouTube support <em>broken</em>.)
       %hr
-    #error
-      %p= @error
-    #notice
-      %p= @notice
+    - if @error
+      #error.alert.alert-danger.container #{@error}
+    - elsif @notice
+      #notice.alert.alert-info.alert-dismissable.container
+        %button.close{ :data => { :dismiss => 'alert'} } &times;
+        #{@notice}
 
-    #content
+    #content.container
       =yield
