@@ -38,7 +38,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    viddl-rb (0.98)
+    viddl-rb (0.99)
       mime-types
       multi_json
       nokogiri
