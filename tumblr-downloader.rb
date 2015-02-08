@@ -1,3 +1,12 @@
+require 'nokogiri'
+require 'open-uri'
+
 def get_tumblr_vid_url (source = "")
-	Net::HTTP.get(URI(source)).lines.grep(/video_file/i)[0].lines(' ').grep(/video_file/i)[0].gsub('\x22', '').gsub('src=', '')
+	iframe = Nokogiri::HTML(open(URI(source))) do |config|
+		config.noerror
+	end.at_css(".tumblr_video_container iframe[src]")['src']
+
+	return Nokogiri::HTML(open(URI(iframe))) do |config|
+		config.noerror
+	end.at_css("video > source")['src']
 end
