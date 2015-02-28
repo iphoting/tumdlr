@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-    %title Tumdlr - Finds the downloadable link to the video file on a Tumblr
+    %title Tumdlr - Finds the downloadable link to the video file on websites
     %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0' }
     %link{ :rel => 'stylesheet', :href => '//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css' }
     %link{ :rel => 'stylesheet', :href => '//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css' }
@@ -11,7 +11,7 @@
     %header#header.container
       %h1
         %a{ :href => url('/') } Tumdlr
-      %p Finds the downloadable link to the video file on a Tumblr, Blip, DailyMotion, Metacafe, SoundCloud, Veoh, and Vimeo.<br>(YouTube support <em>broken</em>.)
+      %p Finds the downloadable link to the video file on a Tumblr, Blip, DailyMotion, Metacafe, SoundCloud, Veoh, Vimeo, and <a href="https://github.com/rg3/youtube-dl/blob/master/docs/supportedsites.md">various other websites</a>.
       %hr
     - if @error
       #error.alert.alert-danger.container #{@error}
@@ -22,3 +22,7 @@
 
     #content.container
       =yield
+
+    %footer#footer.container
+      %hr
+      %p Powered by <a href="http://rg3.github.io/youtube-dl/">youtube-dl</a>, <a href="https://github.com/jaimeMF/youtube-dl-api-server">youtube-dl-api-server</a>, and <a href="https://github.com/rb2k/viddl-rb">viddl-rb</a>.

@@ -62,5 +62,6 @@ DEPENDENCIES
   rack-timeout
   rainbows
   rdiscount
+  rest-client
   sinatra (~> 1.4.0)
   viddl-rb

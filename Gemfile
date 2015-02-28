@@ -14,6 +14,7 @@ gem 'rainbows'
 
 gem 'addressable'
 gem 'nokogiri'
+gem 'rest-client'
 gem 'viddl-rb'
 
 group :development do

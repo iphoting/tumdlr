@@ -49,7 +49,7 @@ post '/url' do
 	@source = params[:url]
 
 	begin
-		@url = get_youtube_vid_url(@source) || get_tumblr_vid_url(@source)
+		@url = get_youtube_dl_url(@source) || get_youtube_vid_url(@source) || get_tumblr_vid_url(@source)
 
 		if @url.empty?
 			flash[:error] = "No video file found!"
