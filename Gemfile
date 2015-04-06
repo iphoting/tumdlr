@@ -17,6 +17,3 @@ gem 'nokogiri'
 gem 'rest-client'
 gem 'viddl-rb'
 
-group :development do
-	gem 'foreman'
-end
