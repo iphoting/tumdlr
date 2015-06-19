@@ -12,6 +12,12 @@ require 'net/http'
 require "#{File.dirname(__FILE__)}/tumblr-downloader"
 require "#{File.dirname(__FILE__)}/youtube-downloader"
 
+configure :production do
+	require 'newrelic_rpm' if ENV["NEW_RELIC_LICENSE_KEY"] and ENV["NEW_RELIC_APP_NAME"]
+	require 'rack/ssl-enforcer'
+	use Rack::SslEnforcer, :hsts => true
+end
+
 use Rack::Timeout
 Rack::Timeout.timeout = 10
 use Rack::ConditionalGet
@@ -21,11 +27,6 @@ use Rack::Deflater
 
 enable :sessions
 use Rack::Flash
-
-configure :production do
-	require 'rack/ssl-enforcer'
-	use Rack::SslEnforcer, :hsts => true
-end
 
 get '/' do
 	@error = flash[:error] unless flash[:error].nil?
