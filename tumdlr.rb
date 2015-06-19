@@ -3,6 +3,8 @@ require 'bundler'
 Bundler.setup(:default, ENV['RACK_ENV'] || :production)
 
 require 'sinatra'
+require 'sinatra/multi_route'
+
 require 'haml'
 require 'rack-timeout'
 require 'rack-flash'
@@ -29,16 +31,16 @@ enable :sessions
 use Rack::Flash
 
 get '/' do
-	@error = flash[:error] unless flash[:error].nil?
-	@notice = flash[:notice] unless flash[:notice].nil?
-	haml :form
+	if params[:url]
+		redirect to("/url?url=#{params[:url]}")
+	else
+		@error = flash[:error] unless flash[:error].nil?
+		@notice = flash[:notice] unless flash[:notice].nil?
+		haml :form
+	end
 end
 
-get '/url' do
-	redirect to('/')
-end
-
-post '/url' do
+route :post, :get, '/url' do
 	if params[:url].empty?
 		flash[:error] = "No URL entered!"
 		redirect to('/')

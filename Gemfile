@@ -8,7 +8,8 @@ gem 'rack-timeout'
 
 gem 'haml'
 gem 'rdiscount'
-gem 'sinatra', '~> 1.4.0'
+gem 'sinatra', '~> 1.4'
+gem 'sinatra-contrib'
 
 gem 'rainbows'
 
