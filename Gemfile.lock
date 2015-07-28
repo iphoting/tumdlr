@@ -23,7 +23,7 @@ GEM
       rack
     rack-protection (1.5.3)
       rack
-    rack-ssl-enforcer (0.2.8)
+    rack-ssl-enforcer (0.2.9)
     rack-test (0.6.3)
       rack (>= 1.0)
     rack-timeout (0.2.4)
@@ -31,7 +31,7 @@ GEM
       kgio (~> 2.5)
       rack (~> 1.1)
       unicorn (~> 4.8)
-    raindrops (0.14.0)
+    raindrops (0.15.0)
     rdiscount (2.1.8)
     rest-client (1.8.0)
       http-cookie (>= 1.0.2, < 2.0)
