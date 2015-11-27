@@ -19,7 +19,7 @@ end
 
 def get_youtube_dl_url(source = "")
 	begin
-		response = RestClient.get 'http://iphoting-yt-dl-api.herokuapp.com/api/info', {:accept => :json, :params => {
+		response = RestClient.get 'https://iphoting-yt-dl-api.herokuapp.com/api/info', {:accept => :json, :params => {
 			:url => source, :flatten => 'True'
 			}}
 		case response.code
