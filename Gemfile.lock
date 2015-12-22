@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.3.8)
+    addressable (2.4.0)
     backports (3.6.7)
     domain_name (0.5.25)
       unf (>= 0.0.5, < 1.0.0)
@@ -14,8 +14,8 @@ GEM
     mini_portile2 (2.0.0)
     multi_json (1.10.1)
     netrc (0.11.0)
-    newrelic_rpm (3.14.0.305)
-    nokogiri (1.6.7)
+    newrelic_rpm (3.14.1.311)
+    nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
     progressbar (0.21.0)
     rack (1.6.4)
@@ -82,4 +82,4 @@ DEPENDENCIES
   viddl-rb
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
