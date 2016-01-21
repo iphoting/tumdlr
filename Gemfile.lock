@@ -15,7 +15,7 @@ GEM
     multi_json (1.10.1)
     netrc (0.11.0)
     newrelic_rpm (3.14.1.311)
-    nokogiri (1.6.7.1)
+    nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     progressbar (0.21.0)
     rack (1.6.4)
@@ -48,7 +48,7 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (>= 1.3, < 3)
-    tilt (2.0.1)
+    tilt (2.0.2)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.1)
