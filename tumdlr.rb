@@ -60,6 +60,12 @@ route :post, :get, '/url' do
 			flash[:error] = "No video file found!"
 			redirect to('/')
 		end
+
+		begin
+			@version = get_youtube_dl_version(api_host)
+		rescue
+			@version = 'Not Available.'
+		end
 		haml :url
 	rescue NoMethodError
 		flash[:error] = "No video file found!"

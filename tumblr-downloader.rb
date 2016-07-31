@@ -33,3 +33,19 @@ def get_youtube_dl_url(source = "", api_host = 'iphoting-yt-dl-api.herokuapp.com
 		return nil
 	end
 end
+
+def get_youtube_dl_version(api_host = 'iphoting-yt-dl-api.herokuapp.com')
+	begin
+		response = RestClient.get "https://#{api_host}/api/version", {:accept => :json}
+
+		case response.code
+		when 200
+			versions = JSON.parse(response)
+			return versions.to_s
+		else
+			return nil
+		end
+	rescue
+		return nil
+	end
+end
