@@ -17,9 +17,9 @@ def get_tumblr_vid_url (source = "")
 	end
 end
 
-def get_youtube_dl_url(source = "")
+def get_youtube_dl_url(source = "", api_host = 'iphoting-yt-dl-api.herokuapp.com')
 	begin
-		response = RestClient.get 'https://iphoting-yt-dl-api.herokuapp.com/api/info', {:accept => :json, :params => {
+		response = RestClient.get "https://#{api_host}/api/info", {:accept => :json, :params => {
 			:url => source, :flatten => 'True'
 			}}
 		case response.code

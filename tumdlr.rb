@@ -29,6 +29,9 @@ use Rack::Deflater
 enable :sessions
 use Rack::Flash
 
+# https enabled RESTful API endpoint
+api_host = 'iphoting-yt-dl-api.herokuapp.com'
+
 get '/' do
 	if params[:url]
 		redirect to("/url?url=#{params[:url]}")
@@ -51,7 +54,7 @@ route :post, :get, '/url' do
 	@source = params[:url]
 
 	begin
-		@url = get_youtube_dl_url(@source) || get_youtube_vid_url(@source) || get_tumblr_vid_url(@source)
+		@url = get_youtube_dl_url(@source, api_host) || get_youtube_vid_url(@source) || get_tumblr_vid_url(@source)
 
 		if @url.empty?
 			flash[:error] = "No video file found!"
