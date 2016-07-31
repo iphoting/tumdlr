@@ -10,7 +10,9 @@ GEM
     http-cookie (1.0.2)
       domain_name (~> 0.5)
     kgio (2.10.0)
-    mime-types (2.99.2)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     multi_json (1.10.1)
     netrc (0.11.0)
@@ -35,10 +37,10 @@ GEM
       unicorn (~> 5.0)
     raindrops (0.16.0)
     rdiscount (2.2.0.1)
-    rest-client (1.8.0)
+    rest-client (2.0.0)
       http-cookie (>= 1.0.2, < 2.0)
-      mime-types (>= 1.16, < 3.0)
-      netrc (~> 0.7)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     sinatra (1.4.7)
       rack (~> 1.5)
       rack-protection (~> 1.4)
@@ -82,5 +84,8 @@ DEPENDENCIES
   sinatra-contrib
   viddl-rb
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.11.2
+   1.12.5
