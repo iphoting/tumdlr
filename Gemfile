@@ -11,7 +11,7 @@ gem 'rdiscount'
 gem 'sinatra', '~> 1.4'
 gem 'sinatra-contrib'
 
-gem 'rainbows'
+gem 'yahns'
 
 gem 'addressable'
 gem 'nokogiri'
