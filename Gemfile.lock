@@ -4,7 +4,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     backports (3.6.8)
-    domain_name (0.5.20161129)
+    domain_name (0.5.20170223)
       unf (>= 0.0.5, < 1.0.0)
     haml (4.0.7)
       tilt
@@ -33,7 +33,7 @@ GEM
     rack-timeout (0.4.2)
     raindrops (0.17.0)
     rdiscount (2.2.0.1)
-    rest-client (2.0.0)
+    rest-client (2.0.1)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
