@@ -15,7 +15,7 @@ gem 'sinatra-contrib'
 gem 'yahns'
 
 gem 'addressable'
-gem 'nokogiri'
+gem 'nokogiri', "~> 1.7"
 gem 'rest-client'
 gem 'viddl-rb'
 
