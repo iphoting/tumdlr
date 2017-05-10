@@ -17,7 +17,6 @@ gem 'yahns'
 gem 'addressable'
 gem 'nokogiri'
 gem 'rest-client'
-gem 'viddl-rb'
 
 group :production do
 	gem 'newrelic_rpm'

@@ -12,7 +12,6 @@ require 'uri'
 require 'addressable/uri'
 require 'net/http'
 require "#{File.dirname(__FILE__)}/tumblr-downloader"
-require "#{File.dirname(__FILE__)}/youtube-downloader"
 
 configure :production do
 	require 'newrelic_rpm' if ENV["NEW_RELIC_LICENSE_KEY"] and ENV["NEW_RELIC_APP_NAME"]
@@ -54,7 +53,7 @@ route :post, :get, '/url' do
 	@source = params[:url]
 
 	begin
-		@url = get_youtube_dl_url(@source, api_host) || get_youtube_vid_url(@source) || get_tumblr_vid_url(@source)
+		@url = get_youtube_dl_url(@source, api_host) || get_tumblr_vid_url(@source)
 
 		if @url.empty?
 			flash[:error] = "No video file found!"

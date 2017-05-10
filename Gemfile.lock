@@ -16,13 +16,12 @@ GEM
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
-    multi_json (1.10.1)
+    multi_json (1.12.1)
     mustermann (1.0.0)
     netrc (0.11.0)
     newrelic_rpm (4.1.0.333)
-    nokogiri (1.6.8.1)
+    nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
-    progressbar (0.21.0)
     public_suffix (2.0.5)
     rack (2.0.2)
     rack-flash3 (1.0.5)
@@ -58,11 +57,6 @@ GEM
     unicorn (5.3.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    viddl-rb (1.1.1)
-      multi_json (~> 1.10.0)
-      nokogiri (~> 1.6.0)
-      progressbar (~> 0.21)
-      rest-client
     yahns (1.15.0)
       kgio (~> 2.9)
       sleepy_penguin (~> 3.2)
@@ -84,7 +78,6 @@ DEPENDENCIES
   rest-client
   sinatra (~> 2.0)
   sinatra-contrib
-  viddl-rb
   yahns
 
 RUBY VERSION
