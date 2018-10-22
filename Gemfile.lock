@@ -1,14 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.0)
+    activesupport (5.2.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    backports (3.11.3)
+    backports (3.11.4)
     concurrent-ruby (1.0.5)
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
@@ -17,25 +17,25 @@ GEM
       tilt
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (1.0.1)
+    i18n (1.1.1)
       concurrent-ruby (~> 1.0)
     kgio (2.11.2)
-    mime-types (3.1)
+    mime-types (3.2.2)
       mime-types-data (~> 3.2015)
-    mime-types-data (3.2016.0521)
+    mime-types-data (3.2018.0812)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
-    mustermann (1.0.2)
+    mustermann (1.0.3)
     netrc (0.11.0)
-    newrelic_rpm (5.2.0.345)
-    nokogiri (1.8.3)
+    newrelic_rpm (5.4.0.347)
+    nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
-    public_suffix (3.0.2)
+    public_suffix (3.0.3)
     rack (2.0.5)
     rack-flash3 (1.0.5)
       rack
-    rack-protection (2.0.3)
+    rack-protection (2.0.4)
       rack
     rack-ssl-enforcer (0.2.9)
     rack-timeout (0.5.1)
@@ -45,18 +45,18 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
-    sinatra (2.0.3)
+    sinatra (2.0.4)
       mustermann (~> 1.0)
       rack (~> 2.0)
-      rack-protection (= 2.0.3)
+      rack-protection (= 2.0.4)
       tilt (~> 2.0)
-    sinatra-contrib (2.0.3)
+    sinatra-contrib (2.0.4)
       activesupport (>= 4.0.0)
       backports (>= 2.8.2)
       multi_json
       mustermann (~> 1.0)
-      rack-protection (= 2.0.3)
-      sinatra (= 2.0.3)
+      rack-protection (= 2.0.4)
+      sinatra (= 2.0.4)
       tilt (>= 1.3, < 3)
     sleepy_penguin (3.5.0)
     temple (0.8.0)
@@ -67,10 +67,10 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    unicorn (5.4.0)
+    unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    yahns (1.15.0)
+    yahns (1.16.0)
       kgio (~> 2.9)
       sleepy_penguin (~> 3.2)
       unicorn (>= 4.6.3, < 6.0)
@@ -94,7 +94,7 @@ DEPENDENCIES
   yahns
 
 RUBY VERSION
-   ruby 2.4.4p296
+   ruby 2.4.5p335
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
