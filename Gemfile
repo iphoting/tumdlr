@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.4.5'
+
+ruby File.read('.ruby-version', mode: 'rb').chomp
 #ruby-gemset=tumdlr
 
 gem 'rack'
@@ -12,12 +13,11 @@ gem 'rdiscount'
 gem 'sinatra', "~> 2.0"
 gem 'sinatra-contrib'
 
-gem 'yahns'
-
 gem 'addressable'
 gem 'nokogiri'
 gem 'rest-client'
 
 group :production do
 	gem 'newrelic_rpm'
+	gem 'iodine', '~> 0.6'
 end
