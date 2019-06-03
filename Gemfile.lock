@@ -11,7 +11,7 @@ GEM
       tilt
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    iodine (0.7.31)
+    iodine (0.7.32)
     mime-types (3.2.2)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2019.0331)
@@ -59,7 +59,7 @@ PLATFORMS
 DEPENDENCIES
   addressable
   haml (~> 5.0)
-  iodine (~> 0.6)
+  iodine (~> 0.7)
   newrelic_rpm
   nokogiri
   rack
