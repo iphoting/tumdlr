@@ -30,7 +30,7 @@ GEM
     rack-protection (2.0.7)
       rack
     rack-ssl-enforcer (0.2.9)
-    rack-timeout (0.5.2)
+    rack-timeout (0.6.0)
     rdiscount (2.2.0.1)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
