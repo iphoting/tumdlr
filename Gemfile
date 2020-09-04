@@ -10,7 +10,7 @@ gem 'rack-timeout'
 
 gem 'haml', "~> 5.1"
 gem 'rdiscount'
-gem 'sinatra', "~> 2.0"
+gem 'sinatra', "~> 2.1"
 gem 'sinatra-contrib'
 
 gem 'addressable'
