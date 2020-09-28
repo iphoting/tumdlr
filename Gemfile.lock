@@ -5,7 +5,7 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    haml (5.1.2)
+    haml (5.2.0)
       temple (>= 0.8.0)
       tilt
     http-accept (1.7.0)
@@ -60,7 +60,7 @@ PLATFORMS
 
 DEPENDENCIES
   addressable
-  haml (~> 5.1)
+  haml (~> 5.2)
   iodine (~> 0.7)
   newrelic_rpm
   nokogiri
