@@ -13,7 +13,7 @@ gem 'rdiscount'
 gem 'sinatra', "~> 2.1"
 gem 'sinatra-contrib'
 
-gem 'addressable'
+gem 'addressable', '>= 2.8.0'
 gem 'nokogiri'
 gem 'rest-client'
 
