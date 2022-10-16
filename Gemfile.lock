@@ -5,8 +5,9 @@ GEM
       public_suffix (>= 2.0.2, < 6.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
-    haml (5.2.2)
-      temple (>= 0.8.0)
+    haml (6.0.7)
+      temple (>= 0.8.2)
+      thor
       tilt
     http-accept (1.7.0)
     http-cookie (1.0.3)
@@ -52,6 +53,7 @@ GEM
       sinatra (= 3.0.2)
       tilt (~> 2.0)
     temple (0.8.2)
+    thor (1.2.1)
     tilt (2.0.11)
     unf (0.1.4)
       unf_ext
@@ -62,7 +64,7 @@ PLATFORMS
 
 DEPENDENCIES
   addressable
-  haml (~> 5.2)
+  haml (~> 6.0)
   iodine (~> 0.7)
   newrelic_rpm
   nokogiri
