@@ -14,7 +14,7 @@ gem 'sinatra', "~> 3.0"
 gem 'sinatra-contrib'
 
 gem 'addressable'
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.13.9'
 gem 'rest-client'
 
 group :production do
