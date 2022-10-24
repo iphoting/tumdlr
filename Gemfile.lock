@@ -33,7 +33,7 @@ GEM
       rack
     rack-ssl-enforcer (0.2.9)
     rack-timeout (0.6.3)
-    rdiscount (2.2.0.2)
+    rdiscount (2.2.7)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
