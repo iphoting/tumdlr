@@ -8,7 +8,7 @@ gem 'rack-flash3'
 gem 'rack-ssl-enforcer'
 gem 'rack-timeout'
 
-gem 'haml', "~> 5.2"
+gem 'haml', "~> 6.0"
 gem 'rdiscount'
 gem 'sinatra', "~> 3.0"
 gem 'sinatra-contrib'
